@@ -1,0 +1,73 @@
+.floater {
+    float: left;
+    min-height: 200px;
+}
+
+/* THESE ARE THE SECTIONS FOR THE DEFAULT (MOBILE) VIEW */
+.w-100 {
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-33 {
+    width: 33.333%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+/* THESE ARE THE SECTIONS FOR THE MEDIUM (550PX OR MORE) VIEW */
+@media(min-width: 550px){
+    .w-md-100 {
+        width: 100%;
+    }
+
+    .w-md-50 {
+        width: 50%;
+    }
+
+    .w-md-33 {
+        width: 33.333%;
+    }
+
+    .w-md-25 {
+        width: 25%;
+    }
+
+    .w-md-20 {
+        width: 20%;
+    }
+} 
+/* END OF MD QUERY */
+
+/* THESE ARE THE SECTIONS FOR THE MEDIUM (960PX OR MORE) VIEW */
+@media(min-width: 960px){
+    .w-lg-100 {
+        width: 100%;
+    }
+
+    .w-lg-50 {
+        width: 50%;
+    }
+
+    .w-lg-33 {
+        width: 33.333%;
+    }   
+
+    .w-lg-25 {
+        width: 25%;
+    }
+
+    .w-lg-20 {
+        width: 20%;
+    }
+} 
+/* END OF LG QUERY */

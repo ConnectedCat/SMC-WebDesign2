@@ -1,0 +1,7 @@
+@import url("layout.css");
+@import url("colors.css");
+
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
