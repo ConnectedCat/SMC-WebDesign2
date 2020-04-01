@@ -1,0 +1,84 @@
+@import url('colors.css');
+
+body {
+    margin: 0px;
+}
+
+header, 
+main {
+    width: 100%;
+}
+
+header {
+    height: 10vh;
+}
+
+main {
+    height: 90vh; 
+}
+
+main.block-inline-centering {
+    text-align: center;
+}
+
+main.flex-center {
+    display: flex;
+    flex-direction: column;
+}
+
+header h3 {
+    text-align: center;
+    margin: 0px;
+    padding: 32px;
+    height: 64px;
+}
+
+footer {
+    min-height: 200px;
+}
+
+footer .text-container {
+    width: 380px;
+    background-color: dodgerblue;
+    height: 200px;
+    display: table-cell;
+    vertical-align: middle; 
+}
+
+.centering-parent {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.centering-child {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    top: 50%;
+    margin-top: -75px;
+    left: 50%;
+    margin-left: -100px;
+}
+
+@media(min-width: 600px){
+    main {
+        width: 580px;
+        margin: auto;
+    }
+
+    main.flex-center {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    main.flex-center div {
+        max-width: 25%;
+    }
+}
+
+@media(min-width: 900px){
+    main {
+        width: 880px;
+    }
+}
