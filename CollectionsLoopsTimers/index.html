@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <form>
+      <label for="group">Group:</label>
+      <select id="group">
+        <option value="cuteAnimals">Cute Animals</option>
+        <option value="food">Food</option>
+        <option value="nature">Nature</option>
+      </select>
+      <label for="category">Category:</label>
+      <select id="category">
+        <option></option>
+      </select>
+    </form>
+  </header>
+  <hr>
+  <div id="carousel">
+    <img id="carouselImg" src="quokkas1.jpg" alt="some very qute quokkas"/>
+  </div>
+  <script>
+    var cuteAnimalCats = ["puppies", "kittens", "quokkas"];
+    var foodCats = ["coffee", "dessert", "cocktails", "muffins"];
+    var natureCats = ["forests", "beaches", "mountains"];
+
+    var groupSelect = document.getElementById("group");
+    var categorySelect = document.getElementById("category");
+
+    groupSelect.addEventListener('change', function(){
+      console.log(groupSelect.value);
+      if(groupSelect.value == 'cuteAnimals'){
+        fillCategory(cuteAnimalCats);
+      }
+      if(groupSelect.value == 'food'){
+        fillCategory(foodCats);
+      }
+      if(groupSelect.value == 'nature'){
+        fillCategory(natureCats);
+      }
+    });
+
+    var fillCategory = function(selection){
+      categorySelect.innerHTML = "";
+      selection.forEach(element => {
+        var opt = document.createElement('option');
+        opt.value = element;
+        opt.textContent = element.charAt(0).toUpperCase() + element.slice(1);
+
+        categorySelect.appendChild(opt);
+      });
+    }
+  </script>
+  <script>
+    var quokkaImgs = ["quokkas1.jpg", "quokkas2.jpg", "quokkas3.jpg"];
+    var currentImg = 0;
+    var carouselImg = document.getElementById("carouselImg");
+
+    window.setInterval(quokkaGallery, 3000);
+
+    function quokkaGallery(){
+      var nextImg = currentImg + 1;
+      if(nextImg == quokkaImgs.length) nextImg = 0;
+      carouselImg.src = quokkaImgs[nextImg];
+      currentImg = nextImg;
+    }
+  </script>
+</body>
+</html>
