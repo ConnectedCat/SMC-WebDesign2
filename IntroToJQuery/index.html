@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <main>
+    <div class="long-ps">
+      <p id="someP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, nostrum aut dolore voluptatibus
+        distinctio, tempore obcaecati at illum earum libero eaque, possimus blanditiis dolorum cumque. Quia atque earum
+        laudantium aliquid!</p>
+
+      <p class="long-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, nostrum aut dolore
+        voluptatibus distinctio, tempore obcaecati at illum earum libero eaque, possimus blanditiis dolorum cumque. Quia
+        atque earum laudantium aliquid!</p>
+    </div>
+
+    <div class="images">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Quokka_at_rottnest_%28cropped%29.jpg"
+        alt="side view of quokka" class="hideable-img">
+    </div>
+
+    <button id="clickB">Click Me to add another</button>
+    <button id="clickR">Click Me to remove some</button>
+
+    <button id="hideBtn">Click me to hide images</button>
+    <button id="toggleBtn">Click me to toggle images' vsibility</button>
+
+    <button id="fadeOutBtn">Click me to fade the images out</button>
+    <button id="fadeToggleBtn">Click me to toggle the images' fading</button>
+
+    <button id="slideUpBtn">Click me to side the images up and away</button>
+
+    <button id="customAnim">Click me for a custom animation</button>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      //everything should go in here!!!
+      $("#clickB").click(function () {
+        $(".long-ps").append(
+          '<p class="long-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, nostrum aut dolore voluptatibus distinctio, tempore obcaecati at illum earum libero eaque, possimus blanditiis dolorum cumque. Quia atque earum laudantium aliquid!</p>'
+          );
+      });
+
+      $("#clickR").click(function () {
+        $('.long-paragraph').remove();
+      })
+
+      $("#hideBtn").click(function () {
+        $('.hideable-img').hide();
+      })
+
+      $("#toggleBtn").click(function () {
+        $('.hideable-img').toggle();
+      })
+
+      $("#fadeOutBtn").click(function () {
+        $('.hideable-img').fadeOut(4000, function () {
+          $(".images").append('<h1>Image Hidden Now!</h1>')
+        });
+      })
+
+      $("#fadeToggleBtn").click(function () {
+        $('.hideable-img').fadeToggle(2000);
+      })
+
+      $("#slideUpBtn").click(function () {
+        $('.hideable-img').slideUp(2000);
+      })
+
+      $('#customAnim').click(function () {
+        $('.hideable-img').animate({
+          height: "0px",
+          width: "920px",
+          marginBottom: "657px"
+        }, 2000);
+      })//end of customAnim click
+
+    })//end of document ready
+  </script>
+</body>
+
+</html>
