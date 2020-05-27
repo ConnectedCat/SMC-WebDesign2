@@ -1,0 +1,15 @@
+img {
+    max-width: 100%;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+}
+
+.product-grid > div {
+    background: #EDE7F6;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
