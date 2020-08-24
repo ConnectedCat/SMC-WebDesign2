@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design 2 overview</title>
+    <style>
+        :root {
+            font-size: 12px;
+        }
+
+        html {
+            background-color: rgb(112, 213, 226);
+        }
+
+        body {
+            width: 100%;
+            margin: 0px auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        header {
+            margin: 3rem;
+            text-align: center;
+        }
+
+        .flexbox {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 1rem;
+        }
+
+        .week {
+            background-color: #c2a9db;
+            border-bottom-left-radius: 3rem;
+            border-top-right-radius: 3rem;
+            padding: 1rem 2rem 3rem 2rem;
+        }
+
+        .grid h2 {
+            grid-column: 1 / -1;
+            background-color: #25f2f2;
+            padding: 2rem;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                width: 768px;
+            }
+
+            header {
+                text-align: left;
+                margin: 3rem 0;
+            }
+
+            .flexbox {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="flexbox">
+        <img src="https://www.smc.edu/_resources/assets/img/ou/logo-dark.svg">
+        <div class="greet">
+            <h1>Web Design 2</h1>
+            <h2>Maxim Safioulline</h2>
+        </div>
+    </header>
+
+    <main class="grid">
+        <div class="week">
+            <h3>Week 2</h3>
+            <ul>
+                <li><a href="">JavaScript-free toggle navbar</a></li>
+                <li><a href="">Source Code</a></li>
+                <li><a href="">In-class Code</a></li>
+            </ul>
+
+        </div>
+        <div class="week">
+            <h3>Week 3</h3>
+            <ul>
+                <li><a href="">Floater grid</a></li>
+                <li><a href="">Source Code</a></li>
+                <li><a href="">In-class Code</a></li>
+            </ul>
+        </div>
+        <div class="week">
+            <h3>Week 4</h3>
+            <ul>
+                <li><a href="">Flexbox layout</a></li>
+                <li><a href="">Source Code</a></li>
+                <li> <a href="">In-class Code</a></li>
+            </ul>
+        </div>
+        <div class="week">
+            <h3>Week 5</h3>
+            <ul>
+                <li><a href="">CSS Grid layout</a></li>
+                <li><a href="">Source Code</a></li>
+                <li><a href="">In-class Code</a></li>
+            </ul>
+        </div>
+        <div class="week">
+            <h3>Week 6</h3>
+            <ul>
+                <li><a href="">Centering in CSS</a></li>
+                <li><a href="">Source Code</a></li>
+                <li><a href="">In-class Code</a></li>
+            </ul>
+        </div>
+        <h2>Midterms!</h2>
+        <div class="week">
+            <h3>Week 9</h3>
+            <ul>
+                <li><a href="">Intro to JavaScript</a></li>
+                <li><a href="">Source Code</a></li>
+                <li><a href="">In-class Code</a></li>
+            </ul>
+        </div>
+        <div class="week">
+            <h3>Week 10</h3>
+            <ul>
+                <li><a href="">What Can JavaScript Do</a></li>
+                <li><a href="">Source Code</a></li>
+                <li><a href="">In-class Code</a></li>
+            </ul>
+        </div>
+        <div class="week">
+            <h3>Week 11</h3>
+            <ul>
+                <li><a href="">Collections, Loops, Timers</a></li>
+                <li><a href="">Source Code</a></li>
+                <li><a href="">In-class Code</a></li>
+            </ul>
+        </div>
+        <div class="week">
+            <h3>Week 12</h3>
+            <ul>
+                <li><a href="">Intro to jQuery</a></li>
+                <li><a href="">Source Code</a></li>
+                <li><a href="">In-class Code</a></li>
+            </ul>
+        </div>
+        <div class="week">
+            <h3>Week 13</h3>
+            <ul>
+                <li><a href="">jQuery UI</a></li>
+                <li><a href="">Source Code</a></li>
+                <li><a href="">In-class Code</a></li>
+            </ul>
+        </div>
+        <div class="week">
+            <h3>Week 14</h3>
+            <ul>
+                <li><a href="">Fancy Box</a></li>
+                <li><a href="">Source Code</a></li>
+                <li><a href="">In-class Code</a></li>
+            </ul>
+        </div>
+        <h2>Finals!</h2>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
