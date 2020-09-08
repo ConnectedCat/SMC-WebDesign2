@@ -1,0 +1,22 @@
+body {
+    margin: 0px;
+}
+
+main {
+    padding: 10px;
+    background-color: aquamarine;
+}
+
+
+@media(min-width: 768px){
+    main {
+        width: 700px;
+        margin: auto;
+    }
+}
+
+@media(min-width: 1023px){
+    main {
+        background-color: red;
+    }
+}
