@@ -1,0 +1,15 @@
+@import url("colors.css");
+@import url("navbar.css");
+
+body {
+    margin: 0px;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
