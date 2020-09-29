@@ -1,0 +1,23 @@
+.brown-bg {
+    background-color: rgb(115, 75, 55);
+}
+
+.peach-bg {
+    background-color: rgb(255, 184, 148);
+}
+
+.teal-bg {
+    background-color: rgb(68, 178, 172);
+}
+
+.sky-bg {
+    background-color: rgb(221, 255, 253);
+}
+
+.black-tx {
+    color: rgb(0, 0, 0);
+}
+
+.teal-tx {
+    color: rgb(68, 178, 172);
+}
