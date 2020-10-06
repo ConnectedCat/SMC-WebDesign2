@@ -1,0 +1,12 @@
+body {
+    margin: 0px;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+img {
+    max-width: 100%;
+}
