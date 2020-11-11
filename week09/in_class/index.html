@@ -35,6 +35,9 @@
 
         let answer = prompt("What's your name?");
         console.log(answer);
+        if(answer === ""){
+            answer = "World";
+        }
         document.getElementById("userName").innerText = answer;
 
 
