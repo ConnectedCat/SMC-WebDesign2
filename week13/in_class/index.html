@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="libs/jqueryUI/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+
+    <link rel="stylesheet" href="main.css">
+    <title>JQuery UI/FancyBox</title>
+</head>
+<body>
+
+    <div id="accordion">
+        <h3>Why is the sky blue?</h3>
+        <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga optio mollitia omnis assumenda ad. Asperiores repudiandae ducimus rem, excepturi magni voluptas perferendis exercitationem nihil quisquam est. Modi corporis accusantium minus!</p>
+        </div>
+        <!-- section 1 end -->
+        <h3>Why is the Earth spherical?</h3>
+        <div>
+            <img src="https://geology.com/google-earth/google-earth.jpg" alt="earth">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni ratione fugiat, vero est harum debitis, laborum dolore voluptatem deserunt sed ducimus soluta nemo cum, consectetur odio placeat. Quo, voluptate.</p>
+        </div>
+        <!-- section 2 end -->
+        <h3>Why do bad things happen to good people?</h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ducimus aspernatur soluta, eligendi cupiditate porro pariatur animi aperiam excepturi eveniet totam commodi eius iusto eaque beatae tenetur, harum accusantium laboriosam.</p>
+        </div>
+        <!-- section 3 end -->
+    </div>
+    <hr>
+
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">Video</a></li>
+            <li><a href="#tabs-2">Photo</a></li>
+            <li><a href="#tabs-3">Audio</a></li>
+            <li><a href="#tabs-4">Lighting</a></li>
+        </ul>
+
+        <div id="tabs-1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti labore amet unde et, consequuntur laborum illum quia error quaerat magni dolor sint modi voluptates vel facilis sed dignissimos necessitatibus in.</p>
+        </div>
+        <div id="tabs-2">
+            <p>Instant strong java affogato saucer caffeine id affogato steamed single origin mazagran. Percolator, steamed wings bar  milk coffee café au lait, instant cup qui and lungo. White dark blue mountain, single shot as body doppio qui roast.Percolator, plunger pot sugar, foam doppio grounds acerbic doppio whipped carajillo. Single shot cinnamon, dripper single shot cortado caramelization macchiato medium. Froth iced, irish mug plunger pot breve macchiato to go robust.</p>
+        </div>
+        <div id="tabs-3">
+            <p>Chase imaginary bugs attack feet, so chase dog then run away and if human is on laptop sit on the keyboard. I shredded your linens for you reaches under door into adjacent room. Reward the chosen human with a slow blink let me in let me out let me in let me out let me in let me out who broke this door anyway all of a sudden cat goes crazy.</p>
+        </div>
+        <div id="tabs-4">
+            <p>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too.</p>
+        </div>
+    </div>
+    <hr>
+
+    <div id="earthquake">
+        <img src="https://newyorkyimby.com/wp-content/uploads/2020/04/1641-Undecliff-Avenue-Rendering01-777x441.jpg" alt="building">
+    </div>
+
+    <hr>
+    <div id="fB-imgs">
+        <a href="imgs/big1.jpg" data-fancybox="gallery" data-caption="Quokka 1">
+            <img src="imgs/small1.jpg" alt="Thumbnail 1">
+        </a>
+
+        <a href="imgs/big2.jpg" data-fancybox="gallery" data-caption="Quokka 2">
+            <img src="imgs/small2.jpg" alt="Thumbnail 2">
+        </a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="libs/jqueryUI/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#accordion").accordion({
+                heightStyle: "content"
+            });
+
+            $("#tabs").tabs();
+
+            $("#earthquake").click(function(){
+                $(this).effect("shake", {}, 1500, aftermath);
+            });
+            
+            function aftermath(){
+                console.log("ruined");
+                $("#earthquake img").attr({
+                    src: "https://cdn.pixabay.com/photo/2016/11/28/11/56/demolition-1864860_960_720.jpg"
+                })
+            }
+        });
+    </script>
+</body>
+</html>
