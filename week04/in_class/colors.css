@@ -1,23 +1,17 @@
-.brown-bg {
-    background-color: rgb(115, 75, 55);
+/* COLORS */
+
+.bg-blue {
+    background-color: rgb(64, 155, 240);
 }
 
-.peach-bg {
-    background-color: rgb(255, 184, 148);
+.bg-purple {
+    background-color: rgb(198, 95, 246);
 }
 
-.teal-bg {
-    background-color: rgb(68, 178, 172);
+.bg-green {
+    background-color: rgb(54, 226, 169);
 }
 
-.sky-bg {
-    background-color: rgb(221, 255, 253);
-}
-
-.black-tx {
-    color: rgb(0, 0, 0);
-}
-
-.teal-tx {
-    color: rgb(68, 178, 172);
+.bg-scarlet {
+    background-color: rgb(241, 60, 90);
 }

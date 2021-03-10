@@ -1,59 +1,46 @@
-@import url(colors.css);
+@import url("reset.css");
+@import url("colors.css");
 
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    gap: 10px;
+    grid-template-rows: repeat(4, 25%);
+    gap: 16px;
     height: 100vh;
 }
 
-
-.grid-item:nth-child(3) {
-    grid-row: 2 / span 2;
+.grid-item:first-child {
+    grid-column: 1 / 3;
 }
 
-.grid-item:last-child {
+.grid-item:nth-child(5){
     grid-row: 3 / span 2;
 }
 
-.grid-container-power {
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
+    grid-gap: 16px;
 }
 
-.grid-item-power {
-    height: 200px;
-}
-
-/* starting with iPad and larger */
-@media (min-width: 768px){ 
-    .grid-container {
-        grid-template-columns: 100px auto 100px;
-        grid-template-rows: repeat(3, 1fr);
-        height: 500px;
-    }
-
-    .grid-item:nth-child(3) {
-        grid-row: 1 / span 2;
-        grid-column: 3 / span 1;
-    }
-
-    .grid-item:nth-child(4),
-    .grid-item:nth-child(5) {
-        grid-row: 2 / span 2;
-    }
-
-    .grid-item:last-child {
-        grid-column: 3/ span 1;
-        grid-row: initial;
-    }
-}
-
-@media (min-width: 820px) {
-    .grid-container {
-        width: 800px;
+@media (min-width: 768px){
+    section {
+        width: 760px;
         margin: auto;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: 1fr 1fr;
+        height: 50vh;
+    }
+
+    .grid-item:nth-child(3){
+        grid-row: 1 / 3;
+        grid-column: 4 / 5;
+    }
+
+    .grid-item:nth-child(5) {
+        grid-row: auto;
     }
 }
