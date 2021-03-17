@@ -1,0 +1,23 @@
+@import url("reset.css");
+@import url("colors.css");
+@import url("grid.css");
+
+article {
+    min-height: 300px;
+}
+
+.jumbotron {
+    background-image: url('http://pi-ltsp.net/images/desktop-background.png');
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.jumbotron h1,
+.jumbotron h3 {
+    color: rgb(250, 245, 255);
+    padding-left: 10%;
+}
+
+.jumbotron h1 {
+    margin-top: 200px;
+}
