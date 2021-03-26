@@ -2,27 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="main.css">
 
-    <title>Document</title>
+    <title>Expadning design systems</title>
 </head>
 <body>
-
     <header></header>
     <main>
-        <h1 class="peach-bg">Hello, World</h1>
-        <p>The quokka, also known as the short-tailed scrub wallaby (/ˈkwɒkə/) (Setonix brachyurus), the only member of the genus Setonix, is a small macropod about the size of a domestic cat.[4] Like other marsupials in the macropod family (such as kangaroos and wallabies), the quokka is herbivorous and mainly nocturnal. Quokkas are found on some smaller islands off the coast of Western Australia, particularly Rottnest Island, just off Perth, and also Bald Island near Albany, and in isolated, scattered populations in forest and coastal heath between Perth and Albany. A small colony exists at the eastern limit of their range in a protected area of Two Peoples Bay Nature Reserve, where they co-exist with the critically endangered Gilbert's potoroo.</p>
-        <div>
+        <section class="flex-container">
+            <div class="w-md-50 w-lg-66 bg-blue d-none d-md-block" id="qHabitat">
+                <p class="txt-light bg-smoke d-inline-block p-1">Quokka's natural habitat</p>
+            </div>
+            <div class="w-md-50 w-lg-33">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="quokka_lg.jpg">
+                    <source media="(min-width: 768px)" srcset="quokka_md.jpg">
+                    <img src="quokka.jpg" alt="Quter quokka">
+                </picture>
+            </div>
+        </section>
 
-            <picture>
-                <source media="(min-width: 1000px)" srcset="quokka_l.jpg">
-                <source media="(min-width: 768px)" srcset="quokka_m.jpg">
-                <img src="quokka_s.jpg" alt="Quokka image 2">
-            </picture>
-        </div>
-        <p>A quokka weighs 2.5 to 5.0 kg (5.5 to 11.0 lb) and is 40 to 54 cm (16 to 21 in) long with a 25-to-30 cm-long (9.8-to-11.8 in) tail, which is quite short for a macropod. It has a stocky build, well developed hind legs, rounded ears, and a short, broad head. Its musculoskeletal system was originally adapted for terrestrial bipedal saltation, but over its evolution, its system has been built for arboreal locomotion.[7] Although looking rather like a very small kangaroo, it can climb small trees and shrubs up to 1.5 metres (4 ft 11 in).[8] Its coarse fur is a grizzled brown colour, fading to buff underneath. The quokka is known to live for an average of 10 years.</p>
+        <h1 class="text-center">Welcome to the world of Quokka!</h1>
+
+        <section class="flex-conatiner">
+            
+        </section>
     </main>
     <footer></footer>
 </body>
-</html>
+</html> 

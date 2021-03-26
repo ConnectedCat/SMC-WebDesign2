@@ -1,5 +1,10 @@
+/* GENERIC RULES */
 body {
     margin: 0px;
+}
+
+img {
+    max-width: 100%;
 }
 
 nav ul {
@@ -7,6 +12,7 @@ nav ul {
     padding-left: 0px;
 }
 
-img {
-    max-width: 100%;
+nav ul a {
+    color: black;
+    text-decoration: none;
 }
