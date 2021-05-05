@@ -2,55 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Timers and Arrays</title>
 </head>
 <body>
-    <div id="carousel">
-        <img src="../collections_loops_timers/quokkas1.jpg" alt="qute quokka 1" id="carouselIMG">
+    <form>
+        <label for="groupSelect">Group: </label>
+        <select id="groupSelect">
+            <option value="animals">Cute animals</option>
+            <option value="food">Food</option>
+            <option value="nature">Nature</option>
+        </select>
+
+        <label for="categorySelect">Category: </label>
+        <select id="categorySelect">
+            <!-- LEAVING THIS EMPTY -->
+        </select>
+
+    </form>
+
+    <hr>
+
+    <div id="Carousel">
+        <img src="" alt="" id="carouselIMG">
     </div>
 
-    <script>
-    let carousel = document.getElementById("carousel");
-    let carouselIMG = document.getElementById("carouselIMG");
-
-    let images = [
-        "../collections_loops_timers/quokkas1.jpg",
-        "../collections_loops_timers/quokkas2.jpg",
-        "../collections_loops_timers/quokkas3.jpg"
-    ]
-    let counter = 0;
-
-
-    let imgChange = function(){
-        counter++;
-        if(counter === 3) {counter = 0}
-        carouselIMG.src = images[counter];
-
-        // METHOD 2:
-        // if(carouselIMG.alt === "qute quokka 1"){
-        //     carouselIMG.src = images[1];
-        //     carouselIMG.alt = "qute quokka 2";
-        // }
-        // else if(carouselIMG.alt === "qute quokka 2"){
-        //     carouselIMG.src = images[2];
-        //     carouselIMG.alt = "qute quokka 3";
-        // }
-        // else if(carouselIMG.alt === "qute quokka 3"){
-        //     carouselIMG.src = images[0];
-        //     carouselIMG.alt = "qute quokka 1";
-        // }
-    }
-
-    let subscribeRequest = function(){
-        prompt("Give us your email or else!!!", "my@email.com");
-    }
-
-    window.addEventListener("load", function(){
-        setTimeout(subscribeRequest, 4000);
-        setInterval(imgChange, 3000);
-    })
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
