@@ -2,75 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Intro to jQuery</title>
+
+    <style>
+        img {
+            position: relative;
+            height: 657px;
+        }
+    </style>
 </head>
 <body>
-    <main>
-        <div class="some-ps">
-            <p class="lorem-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos, libero repudiandae itaque ea consectetur error voluptatibus, odit incidunt voluptates, ipsa hic voluptatum asperiores.</p>
-            <p class="lorem-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos, libero repudiandae itaque ea consectetur error voluptatibus, odit incidunt voluptates, ipsa hic voluptatum asperiores.</p>
-        </div>
+    <div id="paragraphs">
+        <p id="myP">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci eveniet quod accusamus beatae exercitationem debitis. Consequatur qui temporibus, libero distinctio praesentium minima ducimus sed obcaecati provident, laudantium similique quibusdam eaque?</p>
+    </div>
+
+    <div class="img-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Quokka_at_rottnest_%28cropped%29.jpg" alt="Quokka at home">
+    </div>
+
+    <hr>
     
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Quokka_at_rottnest_%28cropped%29.jpg" alt="Quokka at home" class="js-image">
-        
-        <div>
-            <button id="clickB">Click me to add another.</button>
-            <button id="clickR">Click me remove some.</button>
+    <button id="addMore">Add another line</button>
+    <button id="removeSome">Remove clones</button>
+    <button id="hideImg">Hide the image</button>
+    <button id="showImg">Show the image</button>
+    <button id="toggleImg">Toggle the image</button>
+    <button id="fadeImgOut">Fade the image out</button>
+    <button id="slideImgDown">Slide the image down</button>
+    <button id="customAnim">Custom Animation</button>
 
-            <button id="btnHide">Click to hide img.</button>
-            <button id="btnToggle">Click to toggle img.</button>
-            
-            <button id="fadeOut">Click to fade out img.</button>
-            <button id="fadeToggle">Click to toggle fade img.</button>
-
-            <button id="slideToggle">Click to toggle slide.</button>
-            <button id="animate">Click for custom animation.</button>
-        </div>
-    </main>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $("#clickB").click(function(){
-                $(".some-ps").append('<p class="lorem-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos, libero repudiandae itaque ea consectetur error voluptatibus, odit incidunt voluptates, ipsa hic voluptatum asperiores.</p>');
-            });
+        // let addTextB = document.getElementById("addMore");
+        // let textP = document.getElementById("myP");
 
-            $("#clickR").click(function(){
-                $(".lorem-p:last-child").remove();
-            });
+        // addTextB.addEventListener("click", function(){
+        //     let contentP = textP.innerText;
 
-            $("#btnHide").click(function(){
-                $(".js-image").hide();
-            });
+        //     let newP = document.createElement('p');
+        //     newP.innerText = contentP;
+        //     document.getElementById("paragraphs").appendChild(newP);
 
-            $("#btnToggle").click(function(){
-               $(".js-image").toggle(); 
-            })
-
-            $("#fadeOut").click(function(){
-                $(".js-image").fadeOut(2000);
-            })
-
-            $("#fadeToggle").click(function(){
-                $(".js-image").fadeToggle(3000);
-            })
-
-            $("#slideToggle").click(function(){
-                $(".js-image").slideToggle(3000, function(){
-                    $(".some-ps").after("<p>Animation done!<p>");
-                });
-            })
-
-            $("#animate").click(function(){
-                $(".js-image").animate({
-                    height: "0px",
-                    width: "920px",
-                    opacity: "0.2",
-                    marginBottom: "657px" 
-                }, 3000);
-            })
+        // })
+        
+        $("#addMore").click(function(){
+            let cloneP = $("#myP").clone();
+            cloneP.addClass("cloned");
+            $("#paragraphs").append( cloneP );
+            //$("#myP").clone().appendTo("#paragraphs");
         });
+
+        $("#removeSome").click(function(){
+            $(".cloned").remove();
+        })
+
+        $("#hideImg").click(function(){
+            $(".img-container img").hide();
+        })
+
+        $("#showImg").click(function(){
+            $(".img-container img").show();
+        })
+
+        $("#toggleImg").click(function(){
+            $(".img-container img").toggle();
+        })
+
+
+        $("#fadeImgOut").click(function(){
+            $(".img-container img").fadeOut(2000, function(){
+                $(".img-container").append("<h3>Image has finshed fading out!</h3>");
+            });
+        })
+
+        $("#slideImgDown").click(function(){
+            $(".img-container img").slideDown(1000, function(){
+                $(".img-container h3").remove();
+            })
+        })
+
+        $("#customAnim").click(function(){
+            $(".img-container img").animate( 
+                //objects with CSS properies to animate:
+                {
+                    width: "0%", 
+                    left: 500 
+                }
+            );
+        })
+        
+
     </script>
 </body>
 </html>
