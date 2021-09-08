@@ -5,42 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="main.css">
-
-    <title>Document</title>
+    <link href="main.css" rel="stylesheet">
+    
+    <title>responsive navbar</title>
 </head>
 <body>
     <header>
         <nav>
-            <img src="https://i.pinimg.com/originals/3d/9b/56/3d9b560f7def81b29ef215e6f991a869.gif" alt="NASA logo" id="logo"/>
+            <a href="#"><img src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png" alt="MyLogo" class="nav-logo"></a>
 
-            <label for="menuToggle">
-                <img src="https://image.flaticon.com/icons/png/512/8/8738.png" alt="menu toggle button" id="toggleButton">
+            <label for="toggleCheck">
+                <img src="hamburger-flat-icon.png" alt="toggle button for mobile menu" class="toggle-icon">
             </label>
-            <input type="checkbox" id="menuToggle"/>
 
-            <ul>
+            <input type="checkbox" id="toggleCheck">
+
+            <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Conact</a></li>
                 <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
-        <section>
-            <h1>Goodbye, world!</h1>
-            <img src="https://images.newscientist.com/wp-content/uploads/2018/02/07093329/40126461851_14b93ec9d7_o.jpg"  alt="a rocket taking off"/>
-
-            <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
-
-            <p>We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win.</p>
-        </section>
+        <img src="spaceship.jpg" alt="floating spaceship">
+        <div class="body-copy">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur provident porro recusandae at magnam accusamus deleniti error in nulla reiciendis hic repellat, incidunt voluptates ab! Vero, quisquam impedit. Est, nobis.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quia distinctio dolores et eligendi expedita minus voluptas magnam dignissimos consequuntur illum accusantium quasi magni itaque, est sequi ipsa maiores! Neque.</p>
+        </div>
+        
     </main>
-
-    <footer>
-
-    </footer>
 </body>
 </html>
