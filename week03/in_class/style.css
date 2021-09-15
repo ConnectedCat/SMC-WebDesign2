@@ -1,0 +1,55 @@
+@import url(reset.css);
+@import url(colors.css);
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+}
+
+nav li {
+    padding: 10px;
+    border-bottom: 1px solid rgb(16, 34, 43); 
+}
+
+nav li a {
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+}
+
+
+@media (min-width: 768px){
+    .logo {
+        height: 60px;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav ul li {
+        order: 3;
+    }
+
+    nav ul li:nth-child(3){
+        order: 1;
+    }
+
+    nav ul li:nth-child(4){
+        order: 2;
+    }
+}

@@ -1,17 +1,16 @@
 /* COLORS */
-
-.bg-blue {
-    background-color: rgb(64, 155, 240);
+.dark-gray {
+    background-color: rgb(16, 34, 43);
 }
 
-.bg-purple {
-    background-color: rgb(198, 95, 246);
+.olive {
+    background-color: rgb(149, 171, 99);
 }
 
-.bg-green {
-    background-color: rgb(54, 226, 169);
+.green {
+    background-color: rgb(189, 214, 132);
 }
 
-.bg-scarlet {
-    background-color: rgb(241, 60, 90);
+.light-green {
+    background-color: rgb(246, 255, 224);
 }
