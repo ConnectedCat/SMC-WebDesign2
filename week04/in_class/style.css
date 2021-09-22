@@ -1,0 +1,48 @@
+@import url('reset.css');
+@import url('colors.css');
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    min-height: 200px;
+}
+
+.grid-item:nth-child(3) {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 2;
+}
+
+.grid-item:nth-child(5) {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 2;
+}
+
+@media (min-width: 960px) {
+    .grid-container {
+        grid-template-columns: 150px auto 150px;
+        grid-template-rows: repeat(3, 1fr);
+        max-width: 960px;
+        margin: auto;
+    }
+
+    .grid-item:nth-child(3) {
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 2;
+    }
+
+    .grid-item:nth-child(4) {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 2;
+    }
+
+    .grid-item:nth-child(5) {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 2;
+    }
+}
