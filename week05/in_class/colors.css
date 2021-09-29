@@ -1,17 +1,24 @@
 /* COLORS */
-
-.bg-blue {
-    background-color: rgb(64, 155, 240);
+.bg-primary {
+    background-color: #77B3F7;
 }
 
-.bg-purple {
-    background-color: rgb(198, 95, 246);
+.bg-secondary {
+    background-color: #58687A;
 }
 
-.bg-green {
-    background-color: rgb(54, 226, 169);
+.bg-dark {
+    background-color: #3B587A;
 }
 
-.bg-scarlet {
-    background-color: rgb(241, 60, 90);
+.bg-light {
+    background-color: #6090C7;
+}
+
+.bg-accent {
+    background-color: #C2DBF9;
+}
+
+.accent {
+    color: #C2DBF9;
 }

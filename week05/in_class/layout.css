@@ -1,0 +1,83 @@
+.grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 200px);
+    gap: 12px;
+}
+
+/* TABLETS - md */
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 200px);
+    }
+
+    .md-grid-contained {
+        max-width: 768px;
+        margin: auto;
+    }
+
+    .md-grid-fluid {
+        max-width: 100%;
+    }
+
+    .md-col-span-1 {
+        grid-column-end: span 1;
+    }
+    .md-col-span-2 {
+        grid-column-end: span 2;
+    }
+    .md-col-span-3 {
+        grid-column-end: span 3;
+    }
+    .md-col-span-4 {
+        grid-column-end: span 4;
+    }
+
+    .md-dis-none {
+        display: none;
+    }
+
+    .md-dis-init {
+        display: initial;
+    }
+
+}
+
+/* DESKTOP - lg */
+@media (min-width: 960px) {
+    .grid {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(3, 200px);
+    }
+
+    .lg-grid-contained {
+        max-width: 960px;
+        margin: auto;
+    }
+
+    .lg-grid-fluid {
+        max-width: 100%;
+    }
+
+    .lg-dis-none {
+        display: none;
+    }
+
+    .lg-dis-init {
+        display: initial;
+    }
+
+    .lg-col-span-1 {
+        grid-column-end: span 1;
+    }
+    .lg-col-span-4 {
+        grid-column-end: span 4;
+    }
+    .lg-col-span-8 {
+        grid-column-end: span 8;
+    }
+    .lg-col-span-12 {
+        grid-column-end: span 12;
+    }
+}
