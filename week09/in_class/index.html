@@ -1,76 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            margin: 0px;
-        }
-
-        #myHeading {
-            background-color: aquamarine;
-            margin: 0px;
-            padding: 20px;
-        }
-
-        #myDiv {
-            height: 400px;
-            background-color: lightgray;
-        }
-    </style>
-</head>
-<body id="docBody">
-    <h1 id="myHeading">Hello, <span id="userName">World</span>!</h1>
-
-    <div id="myDiv"></div>
-
-    <button href="#" id="colorChange">Change the color!</button>
-    
-    
-
-    <script>
-        console.log("This is your page talking to you!");
-
-        let answer = prompt("What's your name?");
-        console.log(answer);
-        if(answer === ""){
-            answer = "World";
-        }
-        document.getElementById("userName").innerText = answer;
-
-
-        let bigDiv = document.getElementById("myDiv");
-        let trigButton = document.getElementById("colorChange");
-        let docHeading = document.getElementById("myHeading");
-
-        console.log(trigButton);
-
-        trigButton.addEventListener("click", function(){
-            let userAnswer = confirm("Are you sure you want to do this?");
-            console.log(userAnswer);
-
-            if(userAnswer == true){
-                docHeading.style.backgroundColor = "plum";
-                
-                bigDiv.style.backgroundColor = "salmon";
-
-                let smallHeading = document.createElement("h5");
-                smallHeading.innerText = "This is red now!";
-                smallHeading.style.fontStyle = "italic";
-                bigDiv.appendChild(smallHeading);
-                
-                alert("The changes are now complete!");
-            }
-            else {
-                alert("No action will be taken.");
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Intro to JavaScript</title>
+        <style>
+            #mainH {
+                background-color: dodgerblue;
             }
 
-        });
+            #tealPane {
+                background-color: teal;
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="mainH">Intro to JavaScript</h1>
 
+        <section>
+            <button role="button" id="button1">Click me!</button>
+            <div id="tealPane"></div>
+        </section>
         
-    </script>
-    
-</body>
+        <script>
+            console.info("This is an example of a JavaScript command.");
+            let answer = prompt("What's your name?", "");
+
+            let mainHeader = document.getElementById("mainH");
+            let b1 = document.getElementById("button1");
+            let pane = document.getElementById("tealPane");
+
+            let modifyPane = function(){
+                pane.style.backgroundColor = "rgb(10, 100, 180)";
+                let notification = document.createElement("h5");
+                notification.innerText = "This has been modified!";
+                pane.appendChild(notification);
+            }
+
+            console.log( mainHeader );
+            console.log(answer);
+
+            mainHeader.style.backgroundColor = "chartreuse";
+            mainHeader.innerText = mainHeader.innerText + "! Welcome, " + answer;
+
+            b1.addEventListener("click", modifyPane)
+        </script>
+    </body>
 </html>
