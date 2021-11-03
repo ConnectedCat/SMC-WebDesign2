@@ -4,23 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What JS can do</title>
+    <title>DOM manipulation</title>
     <style>
-        body {
-            margin: 0px;
+        .presentation {
+            height: 300px;
+            margin-top: 30px;
         }
-        header {
-            height: 200px;
+
+        #quokkaShowcase {
+            background-image: url(https://www.traveller.com.au/content/dam/images/g/u/n/q/h/0/image.related.articleLeadwide.620x349.gunpvd.png/1488330286332.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: rgb(96, 126, 14);
         }
     </style>
 </head>
 <body>
-    <header id="myHeader"></header>
-    <button id="colorBTN">Change the color!</button><br>
+    <main>
+        <section>
+            <div class="presentation" id="randomColor"></div>
+            <button id="colorButton">Change the color!</button>
+        </section>
 
-    <img src="quokka1.jpg" alt="Qute quokka 1" id="quokkaImg"><br>
-    <button id="toggleBTN">Show the second one!</button>
+        <section>
+            <div class="presentation">
+                <img src="quokka1.jpg" alt="first quokka image" id="toggleImage">
+            </div>
+            <button id="imageToggle">Show the second one.</button>
+        </section>
 
+        <section>
+            <div class="presentation" id="quokkaShowcase">
+
+            </div>
+            <button id="img1">Quokka Image 1</button>
+            <button id="img2">Quokka Image 2</button>
+            <button id="img3">Quokka Image 3</button>
+            <button id="img4">Quokka Image 4</button>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
