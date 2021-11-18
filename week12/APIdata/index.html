@@ -6,17 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro to API</title>
     <style>
-        #displayCocktail img {
-            max-width: 300px;
+        body {
+            font-family: 'Arial', sans-serif;
+            font-weight: 300;
         }
 
-        .rover-img {
-            border: 2px solid red;
+        img {
+            max-width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            main {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
         }
     </style>
 </head>
 <body>
     <header>
+        <h3>Add some content on the page by clicking one of the buttons below</h3>
         <nav>
             <button id="fetchCocktail">Random Cocktail</button>
             <button id="fetchRoverImage">Random image from Mars</button>
