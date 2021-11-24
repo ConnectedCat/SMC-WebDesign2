@@ -4,93 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive strategies</title>
 
-    <link rel="stylesheet" href="libs/jqueryui/jquery-ui.css">
-
-    <style>
-        .draggable-comp {
-            width: 200px;
-            height: 200px;
-            display: inline-block;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
-        .checkout-area {
-            min-height: 300px;
-            border: 1px solid darkgray;
-        }
-    </style>
-    <title>jQuery UI example</title>
+    <link rel="stylesheet" href="assets/baguetteBox.min.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-    <div class="jqueryUI-tabs">
-        <ul>
-            <li><a href="#food">Food</a></li>
-            <li><a href="#nature">Nature</a></li>
-            <li><a href="#animals">Animals</a></li>
-        </ul>
-        <div id="food">
-            <p>Food will be here</p>
-        </div>
-        <div id="nature">
-            <p>Nature will be here</p>
-        </div>
-        <div id="animals">
-            <div class="draggable-comp" style="background-image: url('https://www.pngitem.com/pimgs/m/548-5481735_cute-kitten-png-download-cute-kitten-png-transparent.png');"></div>
-            <div class="draggable-comp" style="background-image: url('https://www.pngkey.com/png/detail/0-9632_puppy-png-image-puppy-transparent-background.png');"></div>
-            <div class="draggable-comp" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/54/Quokka_at_rottnest_%28cropped%29.jpg');"></div>
-            <div class="draggable-comp" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Capuchin_Costa_Rica.jpg/1200px-Capuchin_Costa_Rica.jpg');"></div>
-
-            <div class="checkout-area">
-                <h2>Drop your selection here</h2>
-                <h3>Selected: <span id="selectCount">0</span></h3>
+    <header></header>
+    
+    <main>
+        <section class="flex-container">
+            <div class="d-none d-md-block w-md-50 w-lg-66" id="qHabitat">
+                <p class="bg-tr-cabbage d-inline-block txt-light p-1 txt-shadow">Quokka's natural habitat</p>
             </div>
-        </div>
-    </div>
+            <div class="w-md-50 w-lg-33">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="images/quokka_lg.jpg">
+                    <source media="(min-width: 768px)" srcset="images/quokka_md.jpg">
+                    <img src="images/quokka.jpg" alt="Cute quokka">
+                </picture>
+            </div>
+        </section>
 
-    <!-- REGULAR jQUERY LIBRARY -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <!-- jQUERY UI LIBRARY -->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <h1 class="text-center">Welcome to the World of Quokka!</h1>
+
+        <section class="flex-container gallery">
+            <a href="images/big1.jpg" data-caption="Qute quokka 1" class="w-md-33 w-lg-25 p-1">
+                <img src="images/small1.jpg" alt="First image">
+            </a>
+            <a href="images/big2.jpg" data-caption="Qute quokka 2" class="w-md-33 w-lg-25 p-1">
+                <img src="images/small2.jpg" alt="Second image">
+            </a>
+        </section>
+    </main>
+
+    <script src="assets/baguetteBox.min.js"></script>
     <script>
-        $(document).ready(function(){
-            let count = 0;
-            let alreadyAdded = [];
-
-            let myTabs = $('.jqueryUI-tabs').tabs({
-                collapsible: true,
-                event: "click"
-            });
-
-            myTabs.find(".ui-tabs-nav").sortable({
-                axis: "x",
-                stop: function(){myTabs.tabs("refresh")}
-            });
-
-            $(".draggable-comp").draggable();
-            $(".checkout-area").droppable({
-                drop: function(event, ui){
-                    console.log(event);
-                    console.log(ui);
-                
-                    $(this).addClass("ui-state-highlight");
-                    
-                    if(alreadyAdded.includes(ui.draggable[0])) {
-                        //nothing
-                    }
-                    else {
-                        alreadyAdded.push(ui.draggable[0]);
-                        count = count+1;
-                        $('#selectCount').text(count);
-                    }
-                    
-                    
-                }
-            })
-            //closed the ready() function:
+        window.addEventListener('load', function() {
+          baguetteBox.run('.gallery');
         });
     </script>
 </body>

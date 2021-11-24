@@ -1,0 +1,65 @@
+/* DISPLAY PROPERTIES */
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-none {
+    display: none;
+}
+
+@media(min-width: 768px){
+    .d-md-inline-block {
+        display: inline-block;
+    }
+    
+    .d-md-none {
+        display: none;
+    }
+
+    .d-md-block {
+        display: block;
+    }
+}
+
+
+/* SPACING PROPERTIES */
+
+.p-1 {
+    padding: 0.75rem;
+}
+
+.p-2 {
+    padding: 1.5rem;
+}
+
+/* TYPOGRAPHY */
+
+.text-center {
+    text-align: center;
+}
+
+h1 {
+    font-size: 10vw;
+}
+
+.txt-shadow {
+    text-shadow: 1px 1px 3px black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 1.5em 0.75em;
+}
+
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 6vw;
+    }
+}
+
+@media (min-width: 1024px){
+    h1 {
+        font-size: 3rem;
+    }
+}

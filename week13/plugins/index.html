@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/baguettebox.js@1.11.1/dist/baguetteBox.min.css">
+
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <header></header>
+    <main>
+        <section class="flex-container">
+            <div class="w-md-50 w-lg-66 bg-blue d-none d-md-block" id="qHabitat">
+                <p class="txt-light bg-smoke d-inline-block p-1">Quokka's natural habitat</p>
+            </div>
+            <div class="w-md-50 w-lg-33">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="quokka_lg.jpg">
+                    <source media="(min-width: 768px)" srcset="quokka_md.jpg">
+                    <img src="quokka.jpg" alt="Quter quokka">
+                </picture>
+            </div>
+        </section>
+
+        <h1 class="text-center">Welcome to the world of Quokka!</h1>
+
+        <section class="flex-container gallery">
+            <a href="big1.jpg" data-caption="Image of a qute quokka" class="w-md-50">
+                <img src="small1.jpg" alt="First image">
+            </a>
+            <a href="big2.jpg" data-caption="Another image of a qute quokka" class="w-md-50">
+                <img src="small2.jpg" alt="Second image">
+            </a>
+        </section>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/baguettebox.js@1.11.1/dist/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.gallery');
+    </script>
+</body>
+
+</html>
