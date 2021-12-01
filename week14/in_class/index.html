@@ -4,74 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
-
-    <title>FancyBox example</title>
+    <title>Form submisison</title>
 
     <style>
         main {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(304px, 1fr));
-            gap: 15px;
+            width: 500px;
+            margin: 100px auto;
         }
 
-        img {
+        input {
             width: 100%;
         }
 
-        .fancybox-caption__body {
-            font-size: 24px;
-            font-family: 'Courier New', Courier, monospace;
+        input[type=submit]{
+            margin-top: 20px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .show {
+            display: block;
         }
     </style>
-
-
 </head>
 <body>
     <main>
-        <a href="big1.jpg" data-fancybox="gallery" data-caption="Qute quokka 1">
-            <img src="small1.jpg" alt="Qute quokka 1">
-        </a>
+        <form action="" method="POST" id="ccForm">
+            <label for="uName">Your name:</label>
+            <input type="text" name="username" id="uName">
+            <br/>
+            <label for="uAddress">Your Address:</label>
+            <input type="text" name="address" id="uAddress">
+            <br/>
+            <label for="cCard">Credit Card:</label>
+            <input type="text" name="ccinfo" id="cCard" autocomplete="off">
+            <br/>
+            <label for="expDate">Exp Date:</label>
+            <input type="date" name="expiration" id="expDate">
+            <br/>
+            <input type="submit" value="Submit">
+        </form>
 
-        <a href="big2.jpg" data-fancybox="gallery" data-caption="Qute quokka 2">
-            <img src="small2.jpg" alt="Qute quokka 2">
-        </a>
-
-        <a href="big1.jpg" data-fancybox="gallery">
-            <img src="small1.jpg" alt="Qute quokka 1">
-        </a>
-
-        <a href="big2.jpg" data-fancybox="gallery">
-            <img src="small2.jpg" alt="Qute quokka 2">
-        </a>
-
-        <a href="big1.jpg" data-fancybox="gallery">
-            <img src="small1.jpg" alt="Qute quokka 1">
-        </a>
-
-        <a href="big2.jpg" data-fancybox="gallery">
-            <img src="small2.jpg" alt="Qute quokka 2">
-        </a>
-
-        <a href="big1.jpg" data-fancybox="gallery">
-            <img src="small1.jpg" alt="Qute quokka 1">
-        </a>
-
-        <a href="big2.jpg" data-fancybox="gallery">
-            <img src="small2.jpg" alt="Qute quokka 2">
-        </a>
-
-        <a href="big1.jpg" data-fancybox="gallery">
-            <img src="small1.jpg" alt="Qute quokka 1">
-        </a>
-
-        <a href="big2.jpg" data-fancybox="gallery">
-            <img src="small2.jpg" alt="Qute quokka 2">
-        </a>
+        <div class="hide" id="msg">
+            <h3>Thank you so much for your generous donation.</h3>
+        </div>
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+    <script>
+        let myForm = document.getElementById('ccForm');
+        let thankYou = document.getElementById('msg');
+
+        myForm.addEventListener('submit', function(event){
+            console.log(event);
+            event.preventDefault();
+
+            myForm.classList.add('hide');
+
+            thankYou.classList.remove('hide');
+            thankYou.classList.add('show');
+        })
+    </script>
 </body>
 </html>
